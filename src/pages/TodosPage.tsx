@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
+import { Trash2 } from "lucide-react";
 
 export const TODOS_URL = "http://localhost:8001/todos";
 
@@ -66,14 +67,28 @@ function TodosPage() {
     }
   }
 
+  async function handleDeleteTodo(todoId: string) {
+    try {
+      const { data: deletedTodo } = await axios.delete(
+        `${TODOS_URL}/${todoId}`
+      );
+      setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== todoId));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div>
       <h1>todos</h1>
       <ul>
         {todos.map((todo) => {
           return (
-            <li key={todo.id}>
-              <div>
+            <li
+              key={todo.id}
+              className="flex justify-between items-center p-2 w-60 border border-black rounded-xl"
+            >
+              <div className="flex gap-1">
                 <input
                   type="checkbox"
                   checked={todo.isComplete}
@@ -81,6 +96,9 @@ function TodosPage() {
                 />
                 <label>{todo.title}</label>
               </div>
+              <Button onClick={() => handleDeleteTodo(todo.id)} variant="ghost">
+                <Trash2 className="text-rose-800" />
+              </Button>
             </li>
           );
         })}
