@@ -1,0 +1,104 @@
+{
+  "todos": [
+    {
+      "id": "a1b2c",
+      "title": "Buy groceries",
+      "isComplete": false
+    },
+    {
+      "id": "d3e4f",
+      "title": "Walk the dog",
+      "isComplete": true
+    },
+    {
+      "id": "g5h6i",
+      "title": "Finish homework",
+      "isComplete": false
+    },
+    {
+      "id": "j7k8l",
+      "title": "Call mom",
+      "isComplete": true
+    },
+    {
+      "id": "m9n0o",
+      "title": "Clean the house",
+      "isComplete": true
+    },
+    {
+      "id": "p1q2r",
+      "title": "Pay bills",
+      "isComplete": true
+    },
+    {
+      "id": "s3t4u",
+      "title": "Schedule dentist appointment",
+      "isComplete": false
+    },
+    {
+      "id": "v5w6x",
+      "title": "Read a book",
+      "isComplete": true
+    },
+    {
+      "id": "y7z8a",
+      "title": "Workout",
+      "isComplete": false
+    },
+    {
+      "id": "b9c0d",
+      "title": "Email project updates",
+      "isComplete": true
+    },
+    {
+      "id": "e1f2g",
+      "title": "Cook dinner",
+      "isComplete": false
+    },
+    {
+      "id": "h3i4j",
+      "title": "Buy a gift for a friend",
+      "isComplete": true
+    },
+    {
+      "id": "k5l6m",
+      "title": "Plan weekend trip",
+      "isComplete": false
+    },
+    {
+      "id": "n7o8p",
+      "title": "Do laundry",
+      "isComplete": true
+    },
+    {
+      "id": "q9r0s",
+      "title": "Meditate",
+      "isComplete": false
+    },
+    {
+      "id": "t1u2v",
+      "title": "Write a blog post",
+      "isComplete": true
+    },
+    {
+      "id": "w3x4y",
+      "title": "Organize closet",
+      "isComplete": false
+    },
+    {
+      "id": "z5a6b",
+      "title": "Water plants",
+      "isComplete": true
+    },
+    {
+      "id": "c7d8e",
+      "title": "Backup computer files",
+      "isComplete": false
+    },
+    {
+      "id": "f9g0h",
+      "title": "Attend team meeting",
+      "isComplete": true
+    }
+  ]
+}
