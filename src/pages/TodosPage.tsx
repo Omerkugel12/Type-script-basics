@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { Trash2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const TODOS_URL = "http://localhost:8001/todos";
 
@@ -94,7 +95,9 @@ function TodosPage() {
                   checked={todo.isComplete}
                   onChange={() => handleToggleTodo(todo.id)}
                 />
-                <label>{todo.title}</label>
+                <label>
+                  <Link to={`/todo/${todo.id}`}>{todo.title}</Link>
+                </label>
               </div>
               <Button onClick={() => handleDeleteTodo(todo.id)} variant="ghost">
                 <Trash2 className="text-rose-800" />
