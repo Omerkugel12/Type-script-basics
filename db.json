@@ -3,7 +3,7 @@
     {
       "id": "a1b2c",
       "title": "Buy groceries",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "d3e4f",
@@ -13,7 +13,7 @@
     {
       "id": "g5h6i",
       "title": "Finish homework",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "j7k8l",

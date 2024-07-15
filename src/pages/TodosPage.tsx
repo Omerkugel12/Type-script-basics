@@ -4,6 +4,7 @@ import { Input } from "../components/ui/input";
 import { Button } from "../components/ui/button";
 import { Trash2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import TodoList from "../components/TodoList";
 
 export const TODOS_URL = "http://localhost:8001/todos";
 
@@ -82,30 +83,11 @@ function TodosPage() {
   return (
     <div>
       <h1>todos</h1>
-      <ul>
-        {todos.map((todo) => {
-          return (
-            <li
-              key={todo.id}
-              className="flex justify-between items-center p-2 w-60 border border-black rounded-xl"
-            >
-              <div className="flex gap-1">
-                <input
-                  type="checkbox"
-                  checked={todo.isComplete}
-                  onChange={() => handleToggleTodo(todo.id)}
-                />
-                <label>
-                  <Link to={`/todo/${todo.id}`}>{todo.title}</Link>
-                </label>
-              </div>
-              <Button onClick={() => handleDeleteTodo(todo.id)} variant="ghost">
-                <Trash2 className="text-rose-800" />
-              </Button>
-            </li>
-          );
-        })}
-      </ul>
+      <TodoList
+        todos={todos}
+        handleToggleTodo={handleToggleTodo}
+        handleDeleteTodo={handleDeleteTodo}
+      />
       <form
         onSubmit={(ev) => handleCreatePost(ev)}
         className="flex flex-col gap-2 w-60 p-2 border border-black rounded-xl"
