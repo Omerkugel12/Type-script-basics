@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import { Trash2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import TodoList from "../components/TodoList";
+import CreateTodoForm from "../components/CreateTodoForm";
 
 export const TODOS_URL = "http://localhost:8001/todos";
 
@@ -31,7 +32,7 @@ function TodosPage() {
     fetchTodos();
   }, []);
 
-  async function handleCreatePost(ev: React.FormEvent<HTMLFormElement>) {
+  async function handleCreateTodo(ev: React.FormEvent<HTMLFormElement>) {
     ev.preventDefault();
     const form = ev.target as HTMLFormElement;
     const formData = new FormData(ev.currentTarget);
@@ -88,13 +89,7 @@ function TodosPage() {
         handleToggleTodo={handleToggleTodo}
         handleDeleteTodo={handleDeleteTodo}
       />
-      <form
-        onSubmit={(ev) => handleCreatePost(ev)}
-        className="flex flex-col gap-2 w-60 p-2 border border-black rounded-xl"
-      >
-        <Input name="title" placeholder="Enter new todo" />
-        <Button>Add todo</Button>
-      </form>
+      <CreateTodoForm handleCreateTodo={handleCreateTodo} />
     </div>
   );
 }
